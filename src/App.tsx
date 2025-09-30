@@ -16,7 +16,8 @@ import {
   TankSettingsModal, 
   PumpSettingsModal, 
   SystemSettingsModal, 
-  SensorSettingsModal 
+  SensorSettingsModal,
+  HeatExchangerSettingsModal
 } from './components/modals';
 import { useSystemUpdates, usePumpCalculations, useCycleStatus, useAutoDosing } from './hooks';
 
@@ -56,6 +57,7 @@ const AppContent: React.FC = () => {
   const [returnPumpModalOpen, setReturnPumpModalOpen] = useState(false);
   const [systemModalOpen, setSystemModalOpen] = useState(false);
   const [sensorModalOpen, setSensorModalOpen] = useState(false);
+  const [heatExchangerModalOpen, setHeatExchangerModalOpen] = useState(false);
   const [alarmModalOpen, setAlarmModalOpen] = useState(false);
 
   // Использование хука обновлений системы
@@ -90,6 +92,7 @@ const AppContent: React.FC = () => {
         isCycleRunning={cycleStatus.isRunning}
         isSystemPaused={state.systemPaused}
       />
+
 
       <ControlGrid>
         <TankControl
@@ -192,6 +195,11 @@ const AppContent: React.FC = () => {
       <SensorSettingsModal
         isOpen={sensorModalOpen}
         onClose={() => setSensorModalOpen(false)}
+      />
+
+      <HeatExchangerSettingsModal
+        isOpen={heatExchangerModalOpen}
+        onClose={() => setHeatExchangerModalOpen(false)}
       />
 
       <AlarmPanel 

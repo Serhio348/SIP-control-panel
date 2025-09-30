@@ -4,3 +4,4 @@ export { StatusIndicator } from './StatusIndicator';
 export { ValueDisplay } from './ValueDisplay';
 export { Modal } from './Modal';
 export { InputGroup } from './InputGroup';
+export { default as ValveIcon } from './ValveIcon';

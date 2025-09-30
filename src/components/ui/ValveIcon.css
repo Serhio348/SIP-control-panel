@@ -1,0 +1,35 @@
+/* Альтернатива - вращение вокруг горизонтальной оси в центре рукоятки */
+.valve-handle-group {
+  transition: transform var(--animation-duration) cubic-bezier(0.4, 0, 0.2, 1);
+  transform-origin: 50% 50%; /* Центр рукоятки */
+  transform-box: fill-box;
+}
+
+.valve-closed .valve-handle-group {
+  transform: rotateY(80deg) scale(0.95);
+  opacity: 0.9;
+}
+
+.valve-open .valve-handle-group {
+  transform: rotateY(0deg) scale(1);
+  opacity: 1;
+}
+
+/* Цветовые состояния клапана */
+.valve-closed .valve-body {
+  fill: #dc2626; /* Красный для неактивного состояния */
+}
+
+.valve-closed .valve-handle {
+  fill: #dc2626; /* Красный для неактивного состояния */
+  filter: brightness(0.8) contrast(1.2);
+}
+
+.valve-open .valve-body {
+  fill: #16a34a; /* Зеленый для активного состояния */
+}
+
+.valve-open .valve-handle {
+  fill: #16a34a; /* Зеленый для активного состояния */
+  filter: brightness(1.1) drop-shadow(0 1px 2px rgba(0,0,0,0.2));
+}

@@ -6,4 +6,5 @@ export { WaterSupplyControl } from './WaterSupplyControl';
 export { HeatExchangerControl } from './HeatExchangerControl';
 export { ConductometerControl } from './ConductometerControl';
 export { SystemOverview } from './SystemOverview';
+export { SystemDiagram } from './SystemDiagram';
 export { AlarmPanel } from './AlarmPanel';
